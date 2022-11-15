@@ -9,7 +9,7 @@ export default function About() {
           <meta name="description" content="We build amazing things" />
         </Head>
         <h1>About Page</h1>
-        <Link href="/">Back to Hpme</Link>
+        <Link href="/">Back to Home</Link>
       </>
     ); 
 }

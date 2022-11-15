@@ -11,7 +11,7 @@ export default function Careers() {
         />
       </Head>
       <h1>Careers Page</h1>
-      <Link href="/">Back to Hpme</Link>
+      <Link href="/">Back to Home</Link>
     </>
   );
 }
