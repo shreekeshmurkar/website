@@ -1,18 +1,24 @@
 {
-  "name": "website",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.3",
-    "next": "13.0.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+    "name": "website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@babel/core": "^7.14.8",
+        "@babel/eslint-parser": "^7.14.9",
+        "@babel/preset-react": "^7.14.5",
+        "@mdx-js/loader": "^2.1.5",
+        "@next/mdx": "^13.0.3",
+        "eslint": "8.27.0",
+        "eslint-config-next": "13.0.3",
+        "frontmatter-markdown-loader": "^3.7.0",
+        "next": "13.0.3",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    }
 }
