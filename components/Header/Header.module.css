@@ -1,0 +1,22 @@
+.headerContainer {
+    position: sticky;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 12px 24px 0px;
+    display: flex;
+    padding: 1rem 3em;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    -moz-box-align: center;
+    align-items: center;
+}
