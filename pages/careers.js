@@ -15,12 +15,12 @@ export default function Careers({openings}) {
           return (
             <div key={opening.id} className={styles.card}>
               <h3>{opening.fields.Title}</h3>
-              <p>Desciption : {opening.fields.Desciption}</p>
+              <p>Description : {opening.fields.Description}</p>
               <p>Experience : {opening.fields.Experience}</p>
               <p>Location : {opening.fields.Location}</p>
               <Link
                 className={styles.applyLink}
-                href="https://airtable.com/shrd8wffs2FpB1J8h"
+                href={`https://airtable.com/shrd8wffs2FpB1J8h?prefill_Job Role=${opening.fields.Title}`}
               >
                 Apply
               </Link>
