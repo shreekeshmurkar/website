@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import { getOpenings } from "./api/utils/airtable";
+import styles from "../styles/Careers.module.css";
 export default function Careers({openings}) {
-  console.log(openings);
   return (
     <>
       <Head>
@@ -12,12 +12,20 @@ export default function Careers({openings}) {
       <div>
         <h1>Current Openings</h1>
         {openings.map(opening => {
-          return <div key={opening.id}>
-            <h3>{opening.fields.Title}</h3>
-            <p>Desciption : {opening.fields.Desciption}</p>
-            <p>Experience : {opening.fields.Experience}</p>
-            <p>Location : {opening.fields.Location}</p>
-          </div>
+          return (
+            <div key={opening.id} className={styles.card}>
+              <h3>{opening.fields.Title}</h3>
+              <p>Desciption : {opening.fields.Desciption}</p>
+              <p>Experience : {opening.fields.Experience}</p>
+              <p>Location : {opening.fields.Location}</p>
+              <Link
+                className={styles.applyLink}
+                href="https://airtable.com/shrd8wffs2FpB1J8h"
+              >
+                Apply
+              </Link>
+            </div>
+          );
         })}
       </div>
       <Link href="/">Back to Home</Link>
