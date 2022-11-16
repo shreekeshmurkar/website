@@ -12,7 +12,7 @@
     -moz-box-align: center;
 }
 .footer-box {
-    width: 33%;
+    max-width: 40%;
 }
 
 .footer-box h4 {
