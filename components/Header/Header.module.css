@@ -1,4 +1,4 @@
-.headerContainer {
+.header-container {
     position: sticky;
     right: 0px;
     left: 0px;
@@ -11,6 +11,21 @@
     justify-content: space-between;
     -moz-box-align: center;
     align-items: center;
+}
+
+.brand-container {
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: right;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.brandname {
+    margin: 0 0.5rem;
+    font-size: 2rem;
+    color: #dc2939;
+    font-weight: bold
 }
 
 .menu {

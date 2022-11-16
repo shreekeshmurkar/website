@@ -15,8 +15,8 @@ const Header = (props) => {
     }]
 
     return (
-      <div className={styles.headerContainer}>
-        <div>
+      <div className={styles["header-container"]}>
+        <div className={styles["brand-container"]}>
           <Image
             width="50"
             height="50"
@@ -24,6 +24,7 @@ const Header = (props) => {
             href="/"
             src="/Logo.svg"
           />
+          <div className={styles.brandname}>{props.brandname}</div>
         </div>
         <div className={styles.menu}>
           <NavList items={items} />
