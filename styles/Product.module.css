@@ -7,11 +7,12 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 @media (max-width: 800px) {
-    .feature-container {
+    .feature-container,
+    .product-container {
       flex-direction: column;
     }
   }
@@ -39,7 +40,11 @@
 }
 
 .product-image {
-    box-shadow: 0 0 20px 0 black;
+    box-shadow: 0 0 20px 0 #999;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 1rem;
+    align-self: center;
 }
 
 .product-link {
@@ -49,11 +54,13 @@
     height: 50px;
     width: 200px;
     padding: 1rem 2rem;
+    border-radius: 10px;
 }
 
 .product-link:hover {
     color: white;
-    background: #dc2939;
+    background: #dc2c44;
     box-shadow: 0 0 10px 0 black;
+    cursor: pointer;
 }
 

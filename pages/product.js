@@ -10,7 +10,7 @@ export default function Product(props) {
         <div className={styles["product-container"]}>
         {
             props.attr.productImages.map(image => {
-                return <div className={styles["product-image"]}><Image height="300" width="400" src={image.src} alt="logo"></Image></div>
+                return <Image className={styles["product-image"]} height="300" width="400" src={image.src} alt="logo"></Image>
             })
         }
         </div>
