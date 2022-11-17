@@ -23,11 +23,3 @@ const Header = (props) => {
     );
 }
 export default Header;
-
-export async function getStaticProps() {
-  return {
-    props: {
-      attr: attributes,
-    },
-  };
-}

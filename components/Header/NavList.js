@@ -14,7 +14,7 @@ const NavItem = (props) => {
 const NavList = ({ router, items }) => {
   return (
     <Fragment>
-      {props.items.map((item) => {
+      {items.map((item) => {
         return (
           <NavItem
             isActive={router.pathname === item.href}
