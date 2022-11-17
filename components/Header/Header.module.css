@@ -50,6 +50,7 @@
 }
 
 .isActiveRoute{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 20px 0 -11px red;
     color: #dc2939 !important;
 }
