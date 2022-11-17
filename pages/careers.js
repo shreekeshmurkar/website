@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { getOpenings } from "./api/utils/airtable";
 import styles from "../styles/Careers.module.css";
+import Section from "../components/section/Section";
 export default function Careers({openings}) {
   return (
     <>
@@ -9,8 +10,7 @@ export default function Careers({openings}) {
         <title>Careers</title>
         <meta name="description" content="Careers at KA" />
       </Head>
-      <div>
-        <h1>Current Openings</h1>
+      <Section title="Current Openings">
         {openings.map(opening => {
           return (
             <div key={opening.id} className={styles.card}>
@@ -27,7 +27,7 @@ export default function Careers({openings}) {
             </div>
           );
         })}
-      </div>      
+      </Section>      
     </>
   );
 }
