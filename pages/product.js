@@ -7,6 +7,7 @@ export default function Product(props) {
     <>
         <Features {...props} />
         <h1 className={styles.title}>{props.attr.productTitle}</h1>
+        <div className={styles["product-description"]}>{props.attr.productDescription}</div>
         <div className={styles["product-container"]}>
         {
             props.attr.productImages.map(image => {
@@ -14,7 +15,7 @@ export default function Product(props) {
             })
         }
         </div>
-        <div className={styles["product-link"]}><Link href={props.attr.productLink}>Explore</Link></div>
+        <Link href={props.attr.productLink}><div className={styles["product-link"]}>Explore</div></Link>
     </>
     )
 }
