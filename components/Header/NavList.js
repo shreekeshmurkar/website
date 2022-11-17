@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const NavItem =  (props) => {
     return (
-      <Link href={props.route}>
-        {props.value}
+      <Link href={props.href}>
+        {props.title}
       </Link>
     );
 }
 const NavList = (props) => {
     return <Fragment>
         {props.items.map((item) => {
-            return <NavItem key={item.id} route={item.route} value={item.value} />
+            return <NavItem href={item.href} title={item.title} />
         })}
     </Fragment>
 }

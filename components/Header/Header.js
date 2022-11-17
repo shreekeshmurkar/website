@@ -2,18 +2,6 @@ import Image from "next/image";
 import NavList from "./NavList";
 import styles from "./Header.module.css";
 const Header = (props) => {
-
-    const items = [{
-        id:"1",
-        route:"/about",
-        value:"About"
-    },
-    {
-        id:"2",
-        route:"/careers",
-        value:"Careers"
-    }]
-
     return (
       <div className={styles["header-container"]}>
         <div className={styles["brand-container"]}>
@@ -27,9 +15,17 @@ const Header = (props) => {
           <div className={styles.brandname}>{props.brandname}</div>
         </div>
         <div className={styles.menu}>
-          <NavList items={items} />
+          <NavList items={props.menuItems} />
         </div>
       </div>
     );
 }
 export default Header;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      attr: attributes,
+    },
+  };
+}
