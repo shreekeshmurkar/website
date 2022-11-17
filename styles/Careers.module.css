@@ -40,11 +40,22 @@
   line-height: 1.5;
 }
 
-.applyLink{  
-  color:  #dc2939 !important;   
-  margin-top: 10px;
-  font-weight: bold;
+.cardHeader{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.cardBody{
+  text-align: justify;
   font-size: medium;
+}
+.applyBtn{
+  border: 1px solid #dc2939;
+  border-radius: 5px;
+  color:  #dc2939 !important;   
+  padding: 10px 5px 10px 5px;  
+  font-weight: bold;
+  font-size: medium;  
 }
 
 @media (max-width: 600px) {
@@ -93,6 +104,24 @@
   flex-flow: row wrap;
 }
 
+.children-container >div{
+  padding-bottom: 10px;
+}
 .flex-col{
   flex: 1 0 50%;  
 }
+
+.flex-col >p{
+  text-align: justify;
+}
+
+.opening-title{
+  color:  #dc2939 !important ;  
+  font-weight: bolder;
+  font-size: 1.4rem;
+}
+
+.card >p{
+  text-align: justify;  
+}
+

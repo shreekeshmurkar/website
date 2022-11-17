@@ -13,24 +13,34 @@ export default function Careers({ openings }) {
       <WhyUsSection />
       <GetStartedSection />
       <div className={styles["section-container"]}>
-      <div className={styles["title-container"]}> Current Openings</div>
+        <div className={styles["title-container"]}> Current Openings</div>
         {openings.map((opening) => {
           return (
             <div key={opening.id} className={styles.card}>
-              <h3>{opening.fields.Title}</h3>
-              <p>Description : {opening.fields.Description}</p>
-              <p>Experience : {opening.fields.Experience}</p>
-              <p>Location : {opening.fields.Location}</p>
-              <Link
-                className={styles.applyLink}
-                href={`https://airtable.com/shrd8wffs2FpB1J8h?prefill_Job Role=${opening.fields.Title}`}
-              >
-                Apply
-              </Link>
+              <div className={styles.cardHeader}>
+                <div>
+                  <span className={styles["opening-title"]}>
+                    {opening.fields.Title}
+                  </span>
+                </div>
+                <div className={styles.applyBtn}>
+                  <Link                   
+                    href={`https://airtable.com/shrd8wffs2FpB1J8h?prefill_Job Role=${opening.fields.Title}`}
+                  >
+                    Apply
+                  </Link>
+                </div>
+              </div>
+              <div className={styles.cardBody}></div>
+              <p>
+                <b>Description :</b> {opening.fields.Description}
+              </p>
+              <p><b>Experience :</b> {opening.fields.Experience}</p>
+              <p><b>Location :</b> {opening.fields.Location}</p>
             </div>
           );
         })}
-      </div>      
+      </div>
     </>
   );
 }
@@ -88,7 +98,7 @@ function WhyUsSection() {
             alt="Career"
             src="/CareerWhyUs.jpg"
           ></Image>
-        </div>       
+        </div>
       </div>
     </div>
   );
