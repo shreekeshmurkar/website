@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { getOpenings } from "./api/utils/airtable";
 import styles from "../styles/Careers.module.css";
-import Section from "../components/section/Section";
 export default function Careers({ openings }) {
   return (
     <>
@@ -11,8 +10,10 @@ export default function Careers({ openings }) {
         <title>Careers</title>
         <meta name="description" content="Careers at KA" />
       </Head>
+      <WhyUsSection />
       <GetStartedSection />
-      <Section title="Current Openings">
+      <div className={styles["section-container"]}>
+      <div className={styles["title-container"]}> Current Openings</div>
         {openings.map((opening) => {
           return (
             <div key={opening.id} className={styles.card}>
@@ -29,50 +30,68 @@ export default function Careers({ openings }) {
             </div>
           );
         })}
-      </Section>
+      </div>      
     </>
   );
 }
 
-function GetStartedSection(){
-   return (
-    
+function GetStartedSection() {
+  return (
     <div className={styles["section-container"]}>
-    <div className={styles["title-container"]}> How do you get started?</div>
-    <div className={styles["children-container"]}>
-    <div>
-    <Image
-        width="100"
-        height="100"
-        alt="Apply"            
-        src="/apply.svg"
-      />
-      <h3>1. Apply</h3>
-      <p>Look for the current openings and apply for the best fit job role.</p>
+      <div className={styles["title-container"]}> How do you get started?</div>
+      <div className={styles["children-container"]}>
+        <div>
+          <Image width="100" height="100" alt="Apply" src="/apply.svg" />
+          <h3>1. Apply</h3>
+          <p>
+            Look for the current openings and apply for the best fit job role.
+          </p>
+        </div>
+        <div>
+          <Image width="100" height="100" alt="Apply" src="/interview.svg" />
+          <h3>2. Interview</h3>
+          <p>We will line up a interview call with our technical team.</p>
+        </div>
+        <div>
+          <Image width="100" height="100" alt="Join" src="/join.svg" />
+          <h3>3. Join</h3>
+          <p>That’s it, you’re all set and you can dive right in!</p>
+        </div>
+      </div>
     </div>
-    <div >
-    <Image
-        width="100"
-        height="100"
-        alt="Apply"            
-        src="/interview.svg"
-      />
-      <h3>2. Interview</h3>
-      <p>We will line up a interview call with our technical team.</p>
+  );
+}
+
+function WhyUsSection() {
+  return (
+    <div className={styles["section-container"]}>
+      <div className={styles["title-container"]}> Why Us?</div>
+      <div className={styles["children-container"]}>
+        <div className={styles["flex-col"]}>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </p>
+        </div>
+        <div className={styles["flex-col"]}>
+          <Image
+            width="300"
+            height="300"
+            alt="Career"
+            src="/CareerWhyUs.jpg"
+          ></Image>
+        </div>       
+      </div>
     </div>
-    <div>
-    <Image
-        width="100"
-        height="100"
-        alt="Join"            
-        src="/join.svg"
-      />
-      <h3>3. Join</h3>
-      <p>That’s it, you’re all set and you can dive right in!</p>
-    </div>
-    </div>
-  </div>
-   );
+  );
 }
 
 export async function getServerSideProps(context) {

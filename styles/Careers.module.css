@@ -83,4 +83,16 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;  
+  flex-wrap: wrap;
+}
+
+.children-container-2{
+  display: flex;        
+  justify-content: space-evenly;   
+  min-height: 300px;  
+  flex-flow: row wrap;
+}
+
+.flex-col{
+  flex: 1 0 50%;  
 }
