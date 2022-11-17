@@ -49,6 +49,7 @@
   text-align: justify;
   font-size: medium;
 }
+
 .applyBtn{
   border: 1px solid #dc2939;
   border-radius: 5px;
@@ -56,6 +57,10 @@
   padding: 10px 5px 10px 5px;  
   font-weight: bold;
   font-size: medium;  
+}
+
+.applyBtn:hover{
+  padding: 12px 6px 12px 6px;  
 }
 
 @media (max-width: 600px) {
