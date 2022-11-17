@@ -27,8 +27,7 @@ export default function Careers({openings}) {
             </div>
           );
         })}
-      </div>
-      <Link href="/">Back to Home</Link>
+      </div>      
     </>
   );
 }

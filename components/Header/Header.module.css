@@ -37,6 +37,7 @@
 }
 
 .menu > a {
+    padding-bottom: 10px;
     padding: 0 0.7rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -46,4 +47,9 @@
 .menu > a:hover {
     color: #dc2939;
     font-size: 1.3rem;
+}
+
+.isActiveRoute{
+    border-bottom: 1px solid;
+    color: #dc2939 !important;
 }
