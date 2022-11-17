@@ -66,3 +66,21 @@
     filter: invert(1);
   }
 }
+
+.section-container {
+  margin: 2rem;
+  text-align: center;
+}
+
+.title-container {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0 2rem 0;  
+}
+
+.children-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;  
+}
