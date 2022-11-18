@@ -9,4 +9,7 @@ menuItems:
   - href: /product
     title: Product
     id: 3
+  - href: /services
+    title: Services
+    id: 4
 ---
