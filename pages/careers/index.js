@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { getOpenings } from "./api/utils/airtable";
-import styles from "../styles/Careers.module.css";
+import { getOpenings } from "../api/utils/airtable";
+import styles from "../../styles/Careers.module.css";
 export default function Careers({ openings }) {
   return (
     <>
@@ -15,6 +15,7 @@ export default function Careers({ openings }) {
       <div className={styles["section-container"]}>
         <div className={styles["title-container"]}> Current Openings</div>
         {openings.map((opening) => {
+          const id= opening.id;
           return (
             <div key={opening.id} className={styles.card}>
               <div className={styles.cardHeader}>
@@ -24,8 +25,11 @@ export default function Careers({ openings }) {
                   </span>
                 </div>
                 <div className={styles.applyBtn}>
-                  <Link                   
-                    href={`https://airtable.com/shrd8wffs2FpB1J8h?prefill_Job Role=${opening.fields.Title}`}
+                  <Link     
+                   href={{ pathname: '/careers/openings', query: { id } }}
+                   passHref
+                   as={`/careers/openings/${id}`}
+                  
                   >
                     Apply
                   </Link>
