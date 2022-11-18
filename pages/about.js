@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Head from "next/head";
 import { attributes } from "../content/about.md";
-
+import styles from "../styles/About.module.css";
+import ReactMarkdown from "react-markdown";
 export default function About({ attr }) {
   return (
     <>
@@ -9,9 +10,14 @@ export default function About({ attr }) {
         <title>About Us</title>
         <meta name="description" content="We build amazing things" />
       </Head>
-      <h1>{attr.metaTitle}</h1>
-      <h2>{attr.metaDescription}</h2>
-      <Link href="/">Back to Home</Link>
+      <div className={styles.container}>
+        <h1 className={styles.title}>{attr.title}</h1>
+        <div className={styles.content}><ReactMarkdown children={attr.aboutContent}/></div>
+      </div>
+      <div className={styles["process-container"]}>
+        <h1 className={styles.title}>{attr.processTitle}</h1>
+        <div className={styles.content}><ReactMarkdown children={attr.processContent}/></div>
+      </div>
     </>
   );
 }
