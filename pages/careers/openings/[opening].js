@@ -12,8 +12,7 @@ function Openings(props) {
 export async function getServerSideProps(ctx) {
   const res = await getOpeningById({
     openingId: ctx.params.opening,
-  });
-  console.log(res);
+  });  
   return { props: { fields: res.fields } };
 }
 export default Openings;
