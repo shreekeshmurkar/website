@@ -18,6 +18,17 @@ export default function About({ attr }) {
         <h1 className={styles.title}>{attr.processTitle}</h1>
         <div className={styles.content}><ReactMarkdown children={attr.processContent}/></div>
       </div>
+      <div className={styles.container}>
+        <h1 className={styles.title}>{attr.domainTitle}</h1>
+        {attr.domainContent.map(content => {
+          return (
+            <div key={content.id} className={styles["domain-container"]}>
+              <h3>{content.title}</h3>
+              <div><ReactMarkdown children={content.info} /></div>
+            </div>
+          ); 
+        })}
+        </div>
     </>
   );
 }

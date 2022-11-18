@@ -17,6 +17,7 @@ const NavList = ({ router, items }) => {
       {items.map((item) => {
         return (
           <NavItem
+            key={item.id}
             isActive={router.pathname === item.href}
             href={item.href}
             title={item.title}
