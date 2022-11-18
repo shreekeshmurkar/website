@@ -20,11 +20,8 @@ const getOpenings = async () => {
   return minifyRecords(records);
 };
 
-const getOpeningById = ({ openingId }) => {  
-  return fetch(`${process.env.AIRTABLE_API_ENDPOINT}/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_NAME}/${openingId}`, {
-    headers: {
-      Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
-    },
-  }).then(response => response.json());
+const getOpeningById = async ({ openingId }) => {  
+  const record = await table.find(openingId);
+  return getMinifiedRecord(record);
 };
 export { getOpenings, getOpeningById};
