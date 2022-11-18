@@ -14,7 +14,10 @@ productTitle: Time Tracking App
 productDescription: App to track working time.
 productImages:
   - src: /images/Product1.jpg
+    id: 1
   - src: /images/Product2.jpg
+    id: 2
   - src: /images/Product3.jpg
+    id: 3
 productLink: https://timetrack.azurewebsites.net
 ---
